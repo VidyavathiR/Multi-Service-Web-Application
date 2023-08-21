@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get GPS Coordinates</title>
+</head>
+<body align='center'>
+  <h1>Get GPS Coordinates</h1>
+  <button id="getLocationBtn">Get Coordinates</button>
+  <p id="coordinates"></p>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const getLocationBtn = document.getElementById("getLocationBtn");
+      const coordinatesDisplay = document.getElementById("coordinates");
+
+      getLocationBtn.addEventListener("click", function() {
+        if ("geolocation" in navigator) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            coordinatesDisplay.innerHTML = `Latitude: ${latitude}<br>Longitude: ${longitude}`;
+          }, function(error) {
+            coordinatesDisplay.innerHTML = `Error: ${error.message}`;
+          });
+        } else {
+          coordinatesDisplay.innerHTML = "Geolocation is not available in this browser.";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

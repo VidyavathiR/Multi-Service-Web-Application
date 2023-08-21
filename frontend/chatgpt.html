@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT</title>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages">
+            <div class="message bot-message">
+                <p>Welcome! How can I assist you today?</p>
+            </div>
+        </div>
+        <div id="user-input">
+            <input type="text" id="user-message" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const userMessageInput = document.getElementById('user-message');
+        const sendButton = document.getElementById('send-button');
+
+        sendButton.addEventListener('click', () => {
+            const userMessage = userMessageInput.value.trim();
+            if (userMessage !== '') {
+                addMessage('user', userMessage);
+                userMessageInput.value = '';
+
+                // Send the user message to GPT-3.5
+                fetch('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', { // Replace with your API endpoint
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: userMessage }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const botMessage = data.message;
+                    addMessage('bot', botMessage);
+                })
+                .catch(error => {
+                    console.error('Error sending message:', error);
+                });
+            }
+        });
+
+        function addMessage(sender, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender + '-message');
+            messageDiv.innerHTML = `<p>${message}</p>`;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

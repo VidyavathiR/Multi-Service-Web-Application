@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Speech To Text</title>
+<head>
+</head>
+<body align='center'>
+<h1>Speech To Text</h1>
+<p id= 'action' font-weight=800></p><br /><br />
+<button id="speak" onclick='run()'>Speech</button>
+<h3 id='output'></h3>
+</div>
+
+<script>
+    output = document.getElementById('output')
+    action = document.getElementById('action')
+    
+    function run(){
+        output.innerHTML = "Loading Text!!!";
+        recog = new webkitSpeechRecognition();
+        recog.onstart = () => {
+            action.innerHTML = "Listening !!!"
+        }
+        
+        recog.onresult = (e) => {
+            output.innerHTML = e.results[0][0].transcript;
+            action.innerHTML = '';
+        }
+        
+        recog.start();
+    }
+    
+</script>
+</body>
+</html>

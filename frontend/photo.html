@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take a Photo</title>
+</head>
+<body align='center'>
+    <h1>Take a Photo</h1>
+    <video id="video" autoplay></video>
+    <button id="capture">Capture</button>
+    <canvas id="canvas"></canvas>
+    <img id="photo" alt="Your photo will appear here" style="display: none;">
+
+    <script>
+        // Get references to the video, canvas, and capture button elements
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const photo = document.getElementById('photo');
+        const captureButton = document.getElementById('capture');
+
+        // Check for browser support
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Access the user's webcam
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    // Assign the webcam stream to the video element
+                    video.srcObject = stream;
+                })
+                .catch(function (error) {
+                    console.error('Error accessing the webcam:', error);
+                });
+
+            // Capture button click event
+            captureButton.addEventListener('click', function () {
+                // Draw the current video frame onto the canvas
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                // Display the captured photo as an image
+                photo.src = canvas.toDataURL('image/png');
+                photo.style.display = 'block';
+            });
+        } else {
+            console.error('getUserMedia is not supported in this browser');
+        }
+    </script>
+</body>
+</html>

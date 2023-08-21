@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Web App</title></head>
+<script>
+function fun()
+{
+  document.getElementById("n").innerHTML="Hello "+document.getElementById("n2").value+" Welcome to our webservice!";
+}
+</script>
+<body bgcolor="#f2ffb8">
+<font color="black">
+<div align='center'>
+<h1 >WELCOME TO MY WEB APP</h1>
+<h3 >Enter your name <input id="n2"type='text' name='name' /></h3>
+<br />
+<button onclick="fun()">submit</button><br/><br/>
+<h3 id="n"></h3>
+</div>
+<br /><br />
+<div align='center'>
+<h2>What Service You Want?</h2>
+<table>
+ <tr>
+
+<!--Linux Code-->
+<td><form action='http://13.55.38.15/linux.html'>
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/Linux.jpeg" width=40 height=40></img>
+<input type="submit" style="background-color:yellow;color:black;width:100px;
+height:30px;" value="Linux"> <br /><br />
+ &nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--WhatsApp Code-->
+<td><form action='http://13.55.38.15/whatsapp.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/Whatsapp.png" width=40 height=40></img>
+<input type="submit" style="background-color:green;color:white;width:100px;
+height:30px;" value="WhatsApp"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--Email code-->
+<td><form action='http://13.55.38.15/email.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/Email.png" width=40 height=40></img>
+<input type="submit" style="background-color:white;color:red;width:100px;
+height:30px;" value="Gmail"> <br /><br />&nbsp; &nbsp; &nbsp;
+</form></td>
+
+
+</tr>
+<tr>
+<!--Google Search Code-->
+<td><form action='http://13.55.38.15/gsearch.html'>
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/google.png" width=40 height=40></img>
+<input type="submit" style="background-color:white;color:black;width:100px;
+height:30px;" value="Google"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--Speech to text Code-->
+<td><form action='http://13.55.38.15/speech.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/Speech+to+text.png" width=40 height=40></img> 
+<input type="submit" style="background-color:orange;color:black;width:100px;
+height:30px;" value="Speech Recog"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--Photo Code-->
+<td><form action='http://13.55.38.15/photo.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/Click+a+photo.jpg" width=40 height=40></img>
+<input type="submit" style="background-color:white;color:black;width:100px;
+height:30px;" value="Photo"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td></tr>
+
+
+<tr>
+<!--Video Code-->
+<td><form action='http://13.55.38.15/video.html'>
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/video.png" width=40 height=40></img>
+<input type="submit" style="background-color:#02eda7;color:black;width:100px;
+height:30px;" value="Video"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td>
+
+ <!--Weather Code-->
+<td><form action='http://13.55.38.15/weather.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/weather.png" width=40 height=40></img>
+<input type="submit" style="background-color:#0acff2;color:black;width:100px;
+height:30px;" value="Weather"> <br /><br />&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--GPS Code-->
+<td><form action='http://13.55.38.15/gps.html'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/GPS+cordinating.png" width=40 height=40></img>
+<input type="submit" style="background-color:#aee841;color:black;width:100px;
+height:30px;" value="GPS"> <br /><br />
+&nbsp; &nbsp; &nbsp;
+</form></td></tr>
+
+<!--HTML Code-->
+<tr><td><form action='http://13.55.38.15/online-editor.html'>
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/html.jpg" width=40 height=40></img>
+<input type="submit" style="background-color:#bd6853;color:white;width:100px;
+height:30px;" value="HTML"> <br /><br />&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--ChatGPT Code-->
+<td><form action='https://chat.openai.com/'>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/chatgpt.jpg" width=40 height=40></img>
+<input type="submit" style="background-color:white;color:black;width:100px;
+height:30px;" value="ChatGPT"> <br /><br />&nbsp; &nbsp; &nbsp;
+</form></td>
+
+<!--YouTube Code--> 
+<td><form>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<img src="https://myimagesfull.s3.ap-southeast-2.amazonaws.com/you+tube.png" width=40 height=40></img>
+<input type="submit" id="youtube" style="background-color:red;color:white;width:100px;
+height:30px;" value="YouTube"> <br /><br />&nbsp; &nbsp; &nbsp;
+<script>
+        // Function to open YouTube
+        function YouTube()
+        {
+            window.open('https://www.youtube.com', '_blank');
+        }
+        // Attach the function to a button click event
+        document.getElementById('youtube').addEventListener('click',YouTube);
+ </script>
+</form></td></tr>
+
+
+</table>
+</font>
+</body>
+</html>

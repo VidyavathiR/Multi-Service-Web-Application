@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Streaming</title>
+</head>
+<body>
+    <h1>Video Streaming</h1>
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+    <button id="startButton">Start Streaming</button>
+    <button id="stopButton">Stop Streaming</button>
+
+</body>
+<script>
+    const localVideo = document.getElementById('localVideo');
+const remoteVideo = document.getElementById('remoteVideo');
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
+
+let localStream;
+let peerConnection;
+
+// Function to start video streaming
+async function startStreaming() {
+    try {
+        // Get user media (access to webcam and microphone)
+        localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+
+        // Display the local stream in the local video element
+        localVideo.srcObject = localStream;
+
+        // Create a peer connection
+        peerConnection = new RTCPeerConnection();
+
+        // Add the local stream to the peer connection
+        localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+        // Set up event handlers for the peer connection
+        peerConnection.onicecandidate = event => {
+            if (event.candidate) {
+                // Send the ICE candidate to the remote peer (you would typically send it via a signaling server)
+            }
+        };
+
+        peerConnection.ontrack = event => {
+            // Display the remote stream in the remote video element
+            remoteVideo.srcObject = event.streams[0];
+        };
+
+        // Create an offer to start the peer connection
+        const offer = await peerConnection.createOffer();
+        await peerConnection.setLocalDescription(offer);
+
+        // Send the offer to the remote peer (you would typically send it via a signaling server)
+
+    } catch (error) {
+        console.error('Error starting video streaming:', error);
+    }
+}
+
+// Function to stop streaming
+function stopStreaming() {
+    // Close the peer connection and release the local stream
+    if (peerConnection) {
+        peerConnection.close();
+    }
+    if (localStream) {
+        localStream.getTracks().forEach(track => track.stop());
+    }
+
+    // Clear video elements
+    localVideo.srcObject = null;
+    remoteVideo.srcObject = null;
+}
+
+// Event listeners for start and stop buttons
+startButton.addEventListener('click', startStreaming);
+stopButton.addEventListener('click', stopStreaming);
+
+</script>
+</html>

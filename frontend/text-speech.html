@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Text To Speech</title>
+<head>
+</head>
+<body align='center'>
+<h1>Text To Speech</h1>
+<div>
+<textarea placeholder='Write Anything!!!' rows=10 cols=50 id='text'></textarea>
+</div><br /><br />
+<div>
+<button id='speak'>Speak</button>
+<button id='clear'>Clear</button>
+</div>
+</body>
+
+<script>
+    text = document.getElementById("text");
+    speak = document.getElementById("speak");
+    clear = document.getElementById("clear");
+    
+    speak.addEventListener('click',() => {
+        textToSpeech = text.value;
+        if(textToSpeech){
+            convert(textToSpeech)
+        }
+    });
+    
+    clear.addEventListener('click', () => {
+        text.value = '';
+    });
+    
+    function convert(text){
+        speech = new SpeechSynthesisUtterance(text);
+        speechSynthesis.speak(speech);
+    }
+    
+</script>
+</html>
