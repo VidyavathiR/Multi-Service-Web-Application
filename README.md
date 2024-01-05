@@ -3,7 +3,9 @@ The Multi-Service Web Application is a versatile digital platform designed to pr
 with a wide array of services and functionalities. This web application aims to streamline
 various aspects of users' lives by offering a comprehensive suite of services, making it a
 one-stop solution for their diverse needs.
+
 Features:
+
 Linux Commands - User can enter any Linux commands and get the output. User can even 
 install any linux software or any command using sudo power.
 Whatsapp Message - User can send whatsapp message to anyone within seconds.
