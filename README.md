@@ -1,7 +1,5 @@
 # Multi-Service Web Application
 
-# Multi-Service Web Application
-
 ## Overview
 
 The Multi-Service Web Application is a versatile digital platform designed to streamline various aspects of users' lives by providing a comprehensive suite of services. This web application serves as a one-stop solution for a wide array of user needs, offering functionalities ranging from Linux command execution to video streaming and live interpreter services.
