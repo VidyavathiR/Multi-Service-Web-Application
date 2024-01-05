@@ -47,7 +47,9 @@ Web Development Tools:
 Front-end: HTML, CSS, JavaScript
 
 • HTML, the language that gives web content structure and meaning.
+
 • CSS, the language used to style web pages.
+
 • JavaScript, the scripting language used to create dynamic functionality.
 
 Backend: Python
