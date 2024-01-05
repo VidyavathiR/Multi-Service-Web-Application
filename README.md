@@ -68,8 +68,8 @@ As the project grows, future enhancements include:
 
 To run the Multi-Service Web Application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/multi-service-webapp.git`
-2. Navigate to the project directory: `cd multi-service-webapp`
+1. Clone the repository: `git clone https://github.com/VidyavathiR/Multi-Service-Web-Application.git`
+2. Navigate to the project directory: `cd Multi-Service-Web-Application`
 3. Open the `index.html` file in your web browser.
 
 
