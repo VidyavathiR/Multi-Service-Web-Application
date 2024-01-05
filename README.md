@@ -72,18 +72,7 @@ To run the Multi-Service Web Application locally, follow these steps:
 2. Navigate to the project directory: `cd multi-service-webapp`
 3. Open the `index.html` file in your web browser.
 
-## Contribution Guidelines
 
-Contributions are welcome! To contribute to the project, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`
-3. Make your changes and commit them: `git commit -m 'Description of changes'`
-4. Push your changes to your fork: `git push origin feature-name`
-5. Create a pull request.
-
-
-Thank you for your interest and support!
-
+Thank you.
 
 
