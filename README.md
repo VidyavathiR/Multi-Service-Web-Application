@@ -34,6 +34,7 @@ ChatGPT Prompt - user can go to the chat gpt prompt.
 
 YouTube - User can go to YouTube.
 
+
 Technologies Used:
 
 Frontend: HTML, CSS, JavaScript
@@ -41,6 +42,7 @@ Frontend: HTML, CSS, JavaScript
 Backend: Python
 
 Cloud Hosting and Deployment: AWS EC2
+
 
 Web Development Tools:
 
@@ -52,10 +54,12 @@ Front-end: HTML, CSS, JavaScript
 
 • JavaScript, the scripting language used to create dynamic functionality.
 
+
 Backend: Python
 
 Python is the only programming language that offers a structure for the developers. Python 
 as a backend language suits a variety of projects, from simple to complex.
+
 
 Cloud Platform for hosting the website: AWS (Amazon Web Services) EC2 :
 I used AWS EC2 for the Website hosting and on top of this only my instance will be
