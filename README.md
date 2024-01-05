@@ -1,4 +1,5 @@
 # Multi-Service Web Application
+
 The Multi-Service Web Application is a versatile digital platform designed to provide users
 with a wide array of services and functionalities. This web application aims to streamline
 various aspects of users' lives by offering a comprehensive suite of services, making it a
@@ -36,15 +37,21 @@ YouTube - User can go to YouTube.
 Technologies Used:
 
 Frontend: HTML, CSS, JavaScript
+
 Backend: Python
+
 Cloud Hosting and Deployment: AWS EC2
+
 Web Development Tools:
+
 Front-end: HTML, CSS, JavaScript
+
 • HTML, the language that gives web content structure and meaning.
 • CSS, the language used to style web pages.
 • JavaScript, the scripting language used to create dynamic functionality.
 
 Backend: Python
+
 Python is the only programming language that offers a structure for the developers. Python 
 as a backend language suits a variety of projects, from simple to complex.
 
