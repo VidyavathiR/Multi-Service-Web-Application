@@ -8,18 +8,29 @@ Features:
 
 Linux Commands - User can enter any Linux commands and get the output. User can even 
 install any linux software or any command using sudo power.
+
 Whatsapp Message - User can send whatsapp message to anyone within seconds.
+
 GMail Service - User can send email to anyone.
+
 Google - User can search anything on google.
+
 Speech Recognition - This service provides two options:
 1) Speech To Text
 2) Text To Speech
+ 
 Click Photo - User can click a photo.
+
 Video Streaming - This service gives live video streaming.
+
 Weather Report - User can get live weather report of any location.
+
 GPS Coordinate - User can get his system GPS location.
+
 Live Interpreter - Here, user can use live interpreter.
+
 ChatGPT Prompt - user can go to the chat gpt prompt.
+
 YouTube - User can go to YouTube.
 
 Technologies Used:
