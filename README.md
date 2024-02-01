@@ -73,6 +73,8 @@ To run the Multi-Service Web Application locally, follow these steps:
 3. Open the `index.html` file in your web browser.
 
 
-Thank you.
+---
+
+**Happy Coding! 🚀**
 
 
